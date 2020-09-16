@@ -1,0 +1,30 @@
+.expense-income {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: #b2d3d9;
+}
+
+.expense-card {
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+.expense-card-header {
+    background-color: #d1ecf1;
+}
+
+input {
+    margin: 8px;
+}
+
+.expense-add {
+    margin: 8px;
+}
+
+.income-add {
+    margin-top: 20%;
+}
+
+.modal-header {
+    color: #0c5460;
+}

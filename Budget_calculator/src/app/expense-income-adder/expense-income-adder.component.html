@@ -1,0 +1,49 @@
+<div class="expense-income">
+    <div class="container">
+        <div class="card expense-card">
+            <h5 class="card-header expense-card-header">Something Spent......
+
+            </h5>
+            <div class="card-body">
+                <form (submit)="AddExpense($event)">
+                    <div class="form-group">
+                        <input class="form-control" name="Reason of expense" type="text" placeholder="Reason of expense" [(ngModel)]="expenseReason">
+                        <input class="form-control" name="Expense Amount" type="number" placeholder="Expense Amount" [(ngModel)]="expenseAmount">
+                    </div>
+                    <button class="btn btn-info expense-add">Add Expense</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row-reverse bd-highlight">
+            <div class="p-2 bd-highlight"><button type="button" class="btn btn-warning income-add" data-toggle="modal" data-target="#staticBackdrop">Add Income</button> </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Something Earned......</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        <form (submit)="AddIncome($event)">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Source of Income" name="Source of Income" [(ngModel)]="incomeReason">
+                                <input class="form-control" type="number" placeholder="Income Amount" name="Income Amount" [(ngModel)]="incomeAmount">
+                            </div>
+                            <button class="btn btn-info expense-add">Add Income</button>
+                        </form>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
